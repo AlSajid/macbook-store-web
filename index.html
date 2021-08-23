@@ -26,10 +26,12 @@
             <div class="my-6">
                 <h2 class="font-semibold">Memory</h2>
                 <button
-                    class="bg-gray-100 border-gray-500 border-2 rounded-lg p-2 m-1 text-xs hover:bg-gray-600 hover:text-white">16GB
+                    class="bg-gray-100 border-gray-500 border-2 rounded-lg p-2 m-1 text-xs hover:bg-gray-600 hover:text-white"
+                    onclick="updateMemoryPrice(0)">8GB
                     unified memory</button>
                 <button
-                    class="bg-gray-100 border-gray-500 border-2 rounded-lg p-2 m-1 text-xs hover:bg-gray-600 hover:text-white">8GB
+                    class="bg-gray-100 border-gray-500 border-2 rounded-lg p-2 m-1 text-xs hover:bg-gray-600 hover:text-white"
+                    onclick="updateMemoryPrice(180)">16GB
                     unified memory</button>
 
             </div>
@@ -38,13 +40,16 @@
             <div class="my-6">
                 <h2 class="font-semibold">Storage</h2>
                 <button
-                    class="bg-gray-100 border-gray-500 border-2 rounded-lg p-2 m-1 text-xs hover:bg-gray-600 hover:text-white">256GB
+                    class="bg-gray-100 border-gray-500 border-2 rounded-lg p-2 m-1 text-xs hover:bg-gray-600 hover:text-white"
+                    onclick="updateStoragePrice(0)">256GB
                     SSD storage</button>
                 <button
-                    class="bg-gray-100 border-gray-500 border-2 rounded-lg p-2 m-1 text-xs hover:bg-gray-600 hover:text-white">512GB
+                    class="bg-gray-100 border-gray-500 border-2 rounded-lg p-2 m-1 text-xs hover:bg-gray-600 hover:text-white"
+                    onclick="updateStoragePrice(100)">512GB
                     SSD storage</button>
                 <button
-                    class="bg-gray-100 border-gray-500 border-2 rounded-lg p-2 m-1 text-xs hover:bg-gray-600 hover:text-white">1TB
+                    class="bg-gray-100 border-gray-500 border-2 rounded-lg p-2 m-1 text-xs hover:bg-gray-600 hover:text-white"
+                    onclick="updateStoragePrice(180)">1TB
                     SSD storage</button>
             </div>
 
@@ -52,41 +57,44 @@
             <div class="my-6">
                 <h2 class="font-semibold">Choose your delivery option</h2>
                 <button
-                    class="bg-gray-100 border-gray-500 border-2 rounded-lg p-2 m-1 text-xs hover:bg-gray-600 hover:text-white">Friday,
-                    Aug 21 Delivery charge $20</button>
-                <button
-                    class="bg-gray-100 border-gray-500 border-2 rounded-lg p-2 m-1 text-xs hover:bg-gray-600 hover:text-white">Friday,
+                    class="bg-gray-100 border-gray-500 border-2 rounded-lg p-2 m-1 text-xs hover:bg-gray-600 hover:text-white"
+                    id="normal-delivery">Friday,
                     Aug 25 Free Prime Delivery</button>
+                <button
+                    class="bg-gray-100 border-gray-500 border-2 rounded-lg p-2 m-1 text-xs hover:bg-gray-600 hover:text-white"
+                    id="fast-delivery">Friday,
+                    Aug 21 Delivery charge $20</button>
+
             </div>
 
             <table class="my-12 w-1/2 border-b-2 text-lg">
 
                 <tr class="border-b-2">
                     <td class="font-semibold">Best Price</td>
-                    <td>$<span>1299</span></td>
+                    <td>$<span id="bestPrice">1299</span></td>
                 </tr>
                 <tr class="border-b-2">
                     <td class="font-semibold">Extra Memory Cost</td>
-                    <td>$<span>0</span></td>
+                    <td>$<span id="ExtraMemoryCost">0</span></td>
                 </tr>
                 <tr class="border-b-2">
                     <td class="font-semibold">Extra Storage Cost</td>
-                    <td>$<span>0</span></td>
+                    <td>$<span id="ExtraStorageCost">0</span></td>
                 </tr>
                 <tr class="border-b-2 border-black">
                     <td class="font-semibold">Delivery Charge</td>
-                    <td>$<span>0</span></td>
+                    <td>$<span id="ExtraDeliveryCost">0</span></td>
                 </tr>
                 <tr class="border-b-2">
                     <td class="font-semibold">Total Price</td>
-                    <td>$<span>1299</span></td>
+                    <td>$<span id="totalPrice">1299</span></td>
                 </tr>
             </table>
 
             <!-- promo code -->
             <h3 class="font-semibold">Add Promo code</h3>
-            <input class="border-2 border-gray-500 p-1" type="text" name="" id="">
-            <button class="bg-red-500 text-white py-1 px-2">Apply</button>
+            <input class="border-2 border-gray-500 p-1" type="text" name="" id="promoCode">
+            <button class="bg-red-500 text-white py-1 px-2" id="ApplyPromo">Apply</button>
         </div>
 
     </div>
@@ -94,7 +102,7 @@
 
     <!-- total -->
     <hr>
-    <h2 class="text-center text-2xl font-bold m-4">Total: $<span>1299</span></h2>
+    <h2 class="text-center text-2xl font-bold m-4">Total: $<span id="finalPrice">1299</span></h2>
 
     <script src="js/script.js"></script>
 
